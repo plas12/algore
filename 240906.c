@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	int			%d
 	longlong	$lld
 	float		%f
-	double		%lf   ¡Ú 
+	double		%lf   Â¡Ãš 
 	char		%c
 	char[]		%s
 	*/
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 	*/
 	/*
 	int n;
-	scanf("%1d", &n);   ¡Ú 
+	scanf("%1d", &n);   Â¡Ãš 
 	printf("%d", n);
 	*/
 	/*
