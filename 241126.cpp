@@ -14,7 +14,7 @@ using namespace std;
 
 int main(){
 	
-	//¼ø¼­´ë·Î intÇüÁ¤·Ä ÄÚµå
+	//ì •ë ¬ì½”ë“œ
 	int a = 0;
 	vector <int> v;
 	cin >> a;
