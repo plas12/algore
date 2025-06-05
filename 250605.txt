@@ -1,0 +1,5 @@
+#inlcude <set>
+
+set <int> s;
+
+set 중복 제거
