@@ -24,11 +24,6 @@ int N;
 vector <int> v;
 */
 
-
-//3(7570
-int N;
-vector <int> v;
-
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
@@ -89,20 +84,18 @@ int main(){
 	
 	
 	//3(7570
-	cin >> N;
+	int n, x, result = 0;
+	scanf("%d", &n);
 	
-	int cnt = 0;
-	for(int i = 1; i <= N; i++){
-		int dummy = 0;
-		cin >> dummy;
-		
-		if(dummy != i){
-			cnt++;
-		}
+	v.assign(n + 1, 0);
+	
+	for(int i = 0; i < n; i++){
+		scanf("%d", &x);
+		v[x] = v[x - 1] + 1;
+		result = max(result, v[x]);
 	}
 	
-	printf("%d", cnt - 1);
-	
+	printf("%d", result);
 	
 	return 0;
 }
