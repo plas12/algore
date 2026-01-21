@@ -1,49 +1,63 @@
 #include <cstdio>
-#include <iostream>
 #include <cstring>
-#include <vector>
-#include <utility>
-#include <stack>
-#include <queue> 
 #include <cmath>
+#include <vector>
+#include <stack>
+#include <queue>
+#include <iostream>
+#include <utility>
 #include <algorithm>
 
 using namespace std;
 
-//2(1912
-int a[100001];
+int N, M;
+
+int arr[400];
+int tree[400];
+
+long long init(long long start, long long end, long long node){
+	long long mid = (start + end) / 2;
+	
+	printf("%d %d %d %d   :   ", start, end, node, mid);
+	for(int i = 0; i < N + 10; i++){
+		printf("%d ", tree[i]);
+	}
+	printf("\n");
+	
+	if(start == end){
+		return tree[node] = arr[start];
+	}
+	
+	return tree[node] = init(start, mid, node * 2) + init(mid + 1, end, node * 2 + 1);
+}
 
 
 
 int main(){
-	/*
-	//1(2156
-	int l = 0;
-	int dp[10001];
-	int a[10001];
-	cin >> l;
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
 	
-	for(int i = 0; i < l; i++){
-		cin >> a[i];
+	cin >> N >> M;
+	
+	for(int i = 0; i < N; i++){
+		int dummy = 0;
+		cin >> dummy;
+		
+		arr[i] = dummy;
 	}
 	
-	dp[0] = a[0];
-	dp[1] = a[0] + a[1];
-	dp[2] = max(a[0] + a[1], max(a[1] + a[2], a[0] + a[2]));
-	//printf("%d\n%d\n%d\n", dp[0], dp[1], dp[2]);
+	init(0, N - 1, 1);
 	
-	for(int i = 3; i < l; i++){
-		dp[i] = max(dp[i - 3] + a[i - 1] + a[i], max(dp[i - 2] + a[i], dp[i - 1]));
-		//printf("%d %d\n", dp[i], max(dp[i - 3] + a[i - 1] + a[i], max(dp[i - 2] + a[i], dp[i - 1])));
+	for(int i = 0; i < N + 10; i++){
+		printf("%d ", tree[i]);
 	}
-	
-	printf("%d", dp[l - 1]);
-	*/
+	printf("\n");
 	
 	
-	//2(1912
-	int l = 0;
-	cin >> l;
+	
+	
+	
 	
 	
 	
@@ -54,5 +68,4 @@ int main(){
 	
 	
 	return 0;
-	
 }
