@@ -13,10 +13,10 @@ using namespace std;
 //2042, 2268, 11505
 
 /*
-//¼¼±×¸ÕÆ® Æ®¸®
+//ì„¸ê·¸ë¨¼íŠ¸ íŠ¸ë¦¬
 int init(int start, int end, int node){
-	if(start == end){//³¡¿¡ ¿ÔÀ»¶§ 
-		return tree[node] = arr[start];//arr : Ã³À½ ÀÔ·Â ¹ŞÀº ¹è¿­
+	if(start == end){//ëì— ì™”ì„ë•Œ 
+		return tree[node] = arr[start];//arr : ì²˜ìŒ ì…ë ¥ ë°›ì€ ë°°ì—´
 	}
 	
 	int mid = (start + end) / 2;
@@ -33,7 +33,7 @@ int query(int start, int end, int node, int left, int right){
 		return tree[node];
 	}
 	
-	int mid(start + end) / 2;
+	int mid = (start + end) / 2;
 	
 	return query(start, mid, node * 2, left, right) + query(mid + 1, end, node * 2 + 1, left, right);
 }
@@ -52,7 +52,7 @@ void update(int start, int end, int node, int index, int num){
 	int mid = (start + end) / 2;
 	
 	update(start, mid, node * 2, index, num);
-	update(mid + 1, end, node * 2, index, num);
+	update(mid + 1, end, node * 2 + 1, index, num);
 }
 */
 
@@ -156,3 +156,4 @@ int main(){
 	
 	return 0;
 }
+
